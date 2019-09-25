@@ -1,6 +1,6 @@
 import asyncio
+import datetime
 
-import aiohttp
 import bs4
 import httpx
 from colorama import Fore
@@ -8,6 +8,18 @@ from colorama import Fore
 # Older versions of python require calling loop.create_task() rather than on asyncio.
 # Make this available more easily.
 loop = None
+
+
+def main():
+    global loop
+    loop = asyncio.get_event_loop()
+
+    t0 = datetime.datetime.now()
+
+    loop.run_until_complete(get_title_range_old_version())
+
+    dt = datetime.datetime.now() - t0
+    print(f"Done in {dt.total_seconds():.2} sec")
 
 
 async def get_html(episode_number: int) -> str:
@@ -33,16 +45,9 @@ def get_title(html: str, episode_number: int) -> str:
     return header.text.strip()
 
 
-def main():
-    global loop
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(get_title_range())
-    print("Done.")
-
-
 async def get_title_range_old_version():
     # Please keep this range pretty small to not DDoS my site. ;)
-    for n in range(150, 160):
+    for n in range(220, 231):
         html = await get_html(n)
         title = get_title(html, n)
         print(Fore.WHITE + f"Title found: {title}", flush=True)
@@ -52,7 +57,7 @@ async def get_title_range():
     # Please keep this range pretty small to not DDoS my site. ;)
 
     tasks = []
-    for n in range(150, 160):
+    for n in range(220, 231):
         tasks.append((n, loop.create_task(get_html(n))))
 
     for n, t in tasks:
