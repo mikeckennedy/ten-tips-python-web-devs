@@ -23,7 +23,7 @@ sudo apt install fail2ban -y
 ufw allow ssh
 ufw allow http
 ufw allow https
-ufw -y enable
+ufw enable
 
 # Web app file structure
 mkdir /webapps
