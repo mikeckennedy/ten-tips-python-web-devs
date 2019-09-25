@@ -1,0 +1,22 @@
+{
+  "name": "ten-tips-python-web-devs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeckennedy/ten-tips-python-web-devs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeckennedy/ten-tips-python-web-devs/issues"
+  },
+  "homepage": "https://github.com/mikeckennedy/ten-tips-python-web-devs#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}

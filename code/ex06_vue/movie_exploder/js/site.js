@@ -1,6 +1,6 @@
 const base_url = "http://movie_service.talkpython.fm/api/"
 
-// noinspection ES6ModulesDependencies
+// noinspection ES6ModulesDependencies,DuplicatedCode
 app = new Vue({
     el: '#app',
     data: {
@@ -62,4 +62,5 @@ app = new Vue({
     }
 })
 
+// noinspection JSUnresolvedFunction
 app.init()
