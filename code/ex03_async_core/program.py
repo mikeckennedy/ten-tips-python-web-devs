@@ -2,11 +2,12 @@ import asyncio
 
 import aiohttp
 import bs4
+import httpx
 from colorama import Fore
 
 # Older versions of python require calling loop.create_task() rather than on asyncio.
 # Make this available more easily.
-global loop
+loop = None
 
 
 async def get_html(episode_number: int) -> str:
@@ -14,11 +15,12 @@ async def get_html(episode_number: int) -> str:
 
     url = f'https://talkpython.fm/{episode_number}'
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as resp:
-            resp.raise_for_status()
+    # The async with syntax ensures that all active connections are closed on exit.
+    async with httpx.AsyncClient() as client:
+        resp = await client.get(url)
+        resp.raise_for_status()
 
-            return await resp.text()
+        return resp.text
 
 
 def get_title(html: str, episode_number: int) -> str:
