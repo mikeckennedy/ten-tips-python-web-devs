@@ -4,9 +4,11 @@
       <w>aiodns</w>
       <w>aiohttp</w>
       <w>asyncio</w>
+      <w>billtrackerprodemo</w>
       <w>cchardet</w>
       <w>colorama</w>
       <w>httpx</w>
+      <w>nginx</w>
       <w>ngrok</w>
       <w>passlib</w>
       <w>podcast</w>
@@ -14,6 +16,7 @@
       <w>sqlalchemy</w>
       <w>subcontrols</w>
       <w>tablename</w>
+      <w>uwsgi</w>
     </words>
   </dictionary>
 </component>
