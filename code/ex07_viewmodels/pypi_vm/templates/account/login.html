@@ -5,10 +5,10 @@
     <div>
         <form action="" method="POST" class="account-form">
             <h1>Login</h1>
-            <input name="email" type="email" placeholder=" Your email address " class="form-control" value="{{ stringify(email) }}"
-                   required>
+            <input name="email" type="text" placeholder=" Your email address " class="form-control" value="{{ stringify(email) }}"
+                   >
             <input name="password" type="password" placeholder=" Password" class="form-control" value="{{ stringify(password) }}"
-                   required>
+                   >
             <button type="submit" class="btn btn-success">Login</button>
             {% if error %}
                 <div class="error-msg">

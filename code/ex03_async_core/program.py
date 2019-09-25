@@ -16,7 +16,7 @@ def main():
 
     t0 = datetime.datetime.now()
 
-    loop.run_until_complete(get_title_range_old_version())
+    loop.run_until_complete(get_title_range())
 
     dt = datetime.datetime.now() - t0
     print(f"Done in {dt.total_seconds():.2} sec")

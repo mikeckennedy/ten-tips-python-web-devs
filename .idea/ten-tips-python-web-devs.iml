@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/code/ex05_migrations" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/ex04_async_web" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/ex07_viewmodels" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/ex10_securepy" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

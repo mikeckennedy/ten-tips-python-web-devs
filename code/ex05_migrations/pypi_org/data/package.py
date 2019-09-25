@@ -21,6 +21,7 @@ class Package(SqlAlchemyBase):
 
     author_name: str = sa.Column(sa.String)
     author_email: str = sa.Column(sa.String, index=True)
+    author_twitter: str = sa.Column(sa.String, index=True)
 
     license: str = sa.Column(sa.String, index=True)
 
@@ -33,7 +34,6 @@ class Package(SqlAlchemyBase):
 
     def __repr__(self):
         return '<Package {}>'.format(self.id)
-
 
 # p = Package()  # one query
 #

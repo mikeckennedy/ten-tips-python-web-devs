@@ -7,6 +7,6 @@ add-apt-repository ppa:certbot/certbot -y
 apt update
 apt install python-certbot-nginx -y
 
-certbot --nginx -d billtrackerprodemo.com -d www.billtrackerprodemo.com
+certbot --nginx -d billssltest.talkpython.com
 
 service nginx restart
